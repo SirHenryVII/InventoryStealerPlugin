@@ -1,0 +1,7 @@
+name: Inventory Stealer
+version: '${project.version}'
+main: me.sirhenry.inventorystealer.InventoryStealer
+api-version: 1.16.5
+authors: [ SirHenry ]
+description: Allows Players to Steal Inventory Slots from Each Other
+website: https://github.com/SirHenryVII
