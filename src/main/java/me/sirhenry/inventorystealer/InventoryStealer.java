@@ -1,5 +1,6 @@
 package me.sirhenry.inventorystealer;
 
+import me.sirhenry.inventorystealer.Listeners.PlayerJoinListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class InventoryStealer extends JavaPlugin {
@@ -12,6 +13,9 @@ public final class InventoryStealer extends JavaPlugin {
 
         //Data Storer Init
         DataStorer.init();
+
+        //Register Events
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
 
     }
 

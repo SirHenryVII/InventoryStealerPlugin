@@ -1,1 +1,4 @@
 #Welcome to the Config for InventoryStealer!
+
+#This Value Sets the Default Number of Open Inventory Slots
+DefaultInventorySlots: 18

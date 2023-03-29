@@ -38,4 +38,24 @@ public class DataStorer {
         }
 
     }
+
+    public static void Save(){
+        //Write File
+        try{
+            FileWriter FW = new FileWriter(file.getPath());
+            FW.write(InvList.toString());
+            FW.close();
+        }catch(IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public static void updateInventory(Player player, int num){
+        InvList.put(player.getUniqueId().toString(), num);
+        Save();
+    }
+
+    public static int getInventorySlotNum(Player player){
+        return (int) InvList.get(player.getUniqueId().toString());
+    }
 }
