@@ -1,6 +1,9 @@
 package me.sirhenry.inventorystealer;
 
+import me.sirhenry.inventorystealer.items.InventoryBarrier;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.json.JSONObject;
 
@@ -50,12 +53,28 @@ public class DataStorer {
         }
     }
 
-    public static void updateInventory(Player player, int num){
+    public static void setBarrierNum(Player player, int num){
         InvList.put(player.getUniqueId().toString(), num);
         Save();
     }
 
-    public static int getInventorySlotNum(Player player){
+    public static void updateInventory(Player player){
+        Inventory inv = player.getInventory();
+
+        //remove all barriers
+        for(ItemStack item : inv){
+            if(item.isSimilar(InventoryBarrier.getItem())){
+                inv.remove(item);
+            }
+        }
+
+        //add correct amount of barriers
+        for(int i = 0; i < (int) InvList.get(player.getUniqueId().toString()); i++){
+                inv.setItem(36-i, InventoryBarrier.getItem());
+        }
+    }
+
+    public static int getBarrierNum(Player player){
         return (int) InvList.get(player.getUniqueId().toString());
     }
 }

@@ -13,7 +13,10 @@ public class PlayerJoinListener implements Listener {
 
         //if player has never joined before, set inv slots to Default Values
         if(!DataStorer.InvList.has(e.getPlayer().getUniqueId().toString())){
-            DataStorer.updateInventory(e.getPlayer(), Config.getDefaultHearts());
+            DataStorer.setBarrierNum(e.getPlayer(), Config.getDefaultHearts());
         }
+
+        //update inventory for all players to remove any unwanted exploits
+        DataStorer.updateInventory(e.getPlayer());
     }
 }

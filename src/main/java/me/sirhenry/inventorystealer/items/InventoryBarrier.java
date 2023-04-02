@@ -20,7 +20,7 @@ public class InventoryBarrier {
         ItemMeta meta = item.getItemMeta();
 
         //set Display name
-        meta.setDisplayName("§b§4LOCKED SLOT");
+        meta.setDisplayName("§4LOCKED SLOT");
 
         //set lore
         List<String> lore = meta.getLore();
