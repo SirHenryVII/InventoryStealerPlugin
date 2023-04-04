@@ -1,4 +1,10 @@
 #Welcome to the Config for InventoryStealer!
 
-#This Value Sets the Default Number of Open Inventory Slots
-DefaultInventorySlots: 18
+#This Value Sets the Default Number of Locked Slots
+DefaultBarrierSlots: 18
+
+#This Value Dictates Whether Players will Lose Inventory Slots if Something Other than a Player Kills them
+LoseSlotWhenNotKilledByPlayer: true
+
+#THis Value Dictates Whether Players will be Banned, or set into Spectator Mode When they Lose All Inventory Slots
+BanOnDeath: false

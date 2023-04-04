@@ -20,10 +20,10 @@ public class InventoryBarrier {
         ItemMeta meta = item.getItemMeta();
 
         //set Display name
-        meta.setDisplayName("§4LOCKED SLOT");
+        meta.setDisplayName("§c§lLOCKED SLOT");
 
         //set lore
-        List<String> lore = meta.getLore();
+        List<String> lore = new ArrayList<>();
         lore.add("§cThis Slot is Locked!");
         meta.setLore(lore);
 

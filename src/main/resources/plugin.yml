@@ -1,7 +1,28 @@
-name: Inventory Stealer
+name: InventoryStealer
 version: '${project.version}'
 main: me.sirhenry.inventorystealer.InventoryStealer
-api-version: 1.16.5
+api-version: 1.16
 authors: [ SirHenry ]
 description: Allows Players to Steal Inventory Slots from Each Other
 website: https://github.com/SirHenryVII
+commands:
+  withdraw:
+    description: Allows a Player to Withdraw Inventory Slots into Consumable Items
+    usage: "§cUsage: /withdraw [Number of Slots]"
+    permission: inventorystealer.withdraw
+  inventoryslots:
+    description: Allows an Admin to Set, Add, or Subtract Inventory Slots from any Player
+    usage: "§cUsage: /inventoryslots [Player] [set|add|subtract] [Number of Slots]"
+    permission: inventorystealer.changeslots
+
+permissions:
+  inventorystealer.*:
+    description: Allows a Player to use all Inventory Stealer Commands
+    children:
+      inventorystealer.withdraw:
+        description: Allows a Player to use /withdraw
+        default: true
+      inventorystealer.changeslots:
+        description: Allows a Player to use /inventoryslots
+        default: op
+
