@@ -8,3 +8,30 @@ LoseSlotWhenNotKilledByPlayer: true
 
 #THis Value Dictates Whether Players will be Banned, or set into Spectator Mode When they Lose All Inventory Slots
 BanOnDeath: false
+
+# Whether a player drops heart item(s) on death if killer already has max hearts or you died due to natural causes
+DropSlotsOnDeath: true
+
+# Crafting Recipe for Heart Item
+SlotRecipe:
+  Slot0: DIAMOND_BLOCK
+  Slot1: OBSIDIAN
+  Slot2: DIAMOND_BLOCK
+  Slot3: GOLD_BLOCK
+  Slot4: NETHERITE_INGOT
+  Slot5: GOLD_BLOCK
+  Slot6: DIAMOND_BLOCK
+  Slot7: OBSIDIAN
+  Slot8: DIAMOND_BLOCK
+
+# Crafting Recipe for Revive Totem Item
+ReviveTotemRecipe:
+  Slot0: TOTEM_OF_UNDYING
+  Slot1: DIAMOND_BLOCK
+  Slot2: TOTEM_OF_UNDYING
+  Slot3: NETHERITE_INGOT
+  Slot4: EMERALD
+  Slot5: NETHERITE_INGOT
+  Slot6: TOTEM_OF_UNDYING
+  Slot7: DIAMOND_BLOCK
+  Slot8: TOTEM_OF_UNDYING
